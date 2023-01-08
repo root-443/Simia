@@ -1,0 +1,134 @@
+
+      var MongoClient = require('mongodb').MongoClient;
+      var url = "mongodb://localhost:27017/";
+      var fs = require('fs')
+      var num = (Math.random()*999999)
+      var fname = "f=" + num.toString() + ".html"
+
+
+
+    
+/*var div = '<div class="Product">'+
+            
+
+
+
+
+     f.appendFile('Featured.html', 'Slt' + result[0].Price, function (err) {
+      if (err) throw err;
+      console.log('Updated!'); */
+      
+function Search() {
+
+      
+      
+      
+MongoClient.connect(url, function(err, db) {
+      var dbo = db.db("Produits");
+//var SearchValue = document.getElementById("SBox").value.toUpperCase()
+var query = {Kwrd: "TESTLOL"}
+
+      dbo.collection("info").find(query).toArray(function(err, result) {
+            
+ 
+         if (typeof result[0] == "undefined"    ) {   
+              
+            query = {Name : "TESTLOL"}
+      
+         dbo.collection("info").find(query).toArray(function(err, result) {
+            if (typeof result[0] == "undefined"  ) { 
+
+           // window.location.assign("NotFound.html");
+console.log("HI")
+exit()
+      
+      
+      }
+      
+      else {
+            
+            fs.readFile('SBar.html', function(err, data) {
+            console.log(data)
+           
+          fs.writeFile(fname,data, function (err) {
+            if (err) throw err;
+            console.log(fname)
+            console.log('OK!');
+          }); 
+          });}
+          for (var i = 0; i < result.length; i++){
+                console.log(result[i].Price)
+            var div =     ('<img src="' + result[i].IMGSRC +'"' + ' class="PImage"></img>' +
+            '<br><br>' +
+            '<span class="marque">'+ result[i].Kwrd + '</span>'+
+            '<br><br>' +
+            '<span class="titre">' + result[i].Name + '</span>'+
+            '<br><br>'+
+            '<span class="Prix">'+ result[i].Price + '</span>').toLowerCase()
+            
+            fs.writeFile(fname,"div", function (err) {
+                  if (err) throw err;
+                  console.log(fname)
+                  console.log('file ready');
+                }); 
+   
+          }
+   
+           
+          
+         }); }
+
+         else {
+            fs.readFile('SBar.html', function(err, data) {
+                  console.log(data)
+                 
+                fs.writeFile(fname,data, function (err) {
+                  if (err) throw err;
+                  console.log(fname)
+                  console.log('OK!');
+                }); 
+                });
+            for(var a=0;a <= (result.length + 1);a++) {
+                 
+                  var div =     ('<img src="' + result[a].IMGSRC +'"' + ' class="PImage"></img>' +
+                  '<br><br>' +
+                  '<span class="marque">'+ result[a].Kwrd + '</span>'+
+                  '<br><br>' +
+                  '<span class="titre">' + result[a].Name + '</span>'+
+                  '<br><br>'+
+                  '<span class="Prix">'+ result[a].Price + '</span>').toLowerCase()
+                  
+                  fs.appendFile(fname,div, function (err) {
+                        if (err) throw err;
+                        console.log(fname)
+                        console.log('file ready');
+                      }); 
+         
+            
+               
+                  
+            }
+}
+         
+      
+
+        
+
+     
+       
+     
+   
+       
+       
+       db.close();
+       
+      });
+}); 
+
+     // window.location.assign(fname);
+
+}
+
+
+
+Search()

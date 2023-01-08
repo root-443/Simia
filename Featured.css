@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Comfortaa', cursive;
+}
+
+body{
+	background-color: white;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+.logo {
+
+	position: absolute;
+    top: 5%;
+    left: 2%;
+
+
+}
+.wrapper{
+	position: absolute;
+    top: 8%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0,0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    border-radius: 0px;
+}
+
+.wrapper .input {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.searchbtn {
+    background: #ffec00;
+    width: 10%;
+    border-radius: 0px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchbtn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+
+
+.Product {
+
+	
+	
+	 max-width: 700px;
+  border: 5px solid grey;
+  padding: 20px;
+  margin: 20px;
+
+
+}
+
+.PImage {
+
+	width: 300px;
+	height: 300px;
+
+
+}
+
+
+.BODY {
+
+	top: 15%;
+	left: 0%;
+	position: absolute;
+	 max-width: 3000px;
+  border: 2px solid grey;
+  padding: 50px;
+  margin: 20px;
+
+
+}
+.BODY2 {
+	position: absolute;
+	top: -3%;
+	left: 100%;
+	position: absolute;
+	 max-width: 3000px;
+  border: 2px solid grey;
+  padding: 50px;
+  margin: 20px;
+
+}

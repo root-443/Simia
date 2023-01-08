@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+*{
+	margin: 0;
+	padding: 0;
+	outline: none;
+	box-sizing: border-box;
+	font-family: 'Comfortaa', cursive;
+}
+
+body{
+	background-color: white;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+}
+
+
+.title {
+
+	color: black;
+	font-family: sans-serif;
+	text-align: center;
+	font-size: 70px;
+	top: 70%;
+	left: 50%;
+    justify-content: space-between;
+    border-radius: 50px;
+
+}
+.wrapper{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0,0.6);
+    max-width: 550px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    border-radius: 0px;
+}
+
+.wrapper .input {
+    width: 85%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 0px;
+    font-weight: bold;scroll
+}
+
+.searchbtn {
+    background: #ffec00;
+    width: 10%;
+    border-radius: 0px;
+    position: relative;
+    cursor: pointer;
+}
+
+.searchbtn .fas{
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+}
+
+.searchbtn:hover {
+
+	background-color: grey;
+
+}
+.help {
+
+	position: absolute;
+	top: 60%;
+	left: 30%;
+
+}
